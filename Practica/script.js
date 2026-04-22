@@ -1,8 +1,4 @@
-/**
- * AutoTaller — Gestión de Órdenes Profesional
- */
 
-// 1. Manejo Seguro del Estado
 const INITIAL_STATE = { tasks: [], filter: 'todas', nextId: 1 };
 
 const loadState = () => {
