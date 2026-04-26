@@ -1,0 +1,242 @@
+.ecuador-map {
+  padding: 20px;
+}
+
+.map-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.map-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  background: linear-gradient(90deg, #f5a623, #e67e22);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.map-subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.map-filters {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.region-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.region-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.map-content {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 900px) {
+  .map-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.map-container {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.map-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-container .province {
+  transition: all 0.3s ease;
+}
+
+.map-container .province:hover {
+  filter: brightness(1.3);
+}
+
+.info-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.3s ease;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.info-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--text);
+}
+
+.region-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.info-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.info-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+
+.info-stat-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.info-stat-label {
+  font-size: 0.65rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.info-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.info-placeholder {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.info-placeholder h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.info-placeholder p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.map-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .map-title {
+    font-size: 1.6rem;
+  }
+  
+  .map-content {
+    gap: 16px;
+  }
+  
+  .map-container {
+    padding: 12px;
+  }
+  
+  .info-stats {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .info-stat {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  
+  .map-stats {
+    gap: 24px;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+}
